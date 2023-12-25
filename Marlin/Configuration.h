@@ -1695,7 +1695,7 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 328 //Tab
+#define X_BED_SIZE 330 //Tab
 #define Y_BED_SIZE 500 //Tab
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
@@ -2071,7 +2071,7 @@
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
 #define MANUAL_X_HOME_POS 0
-#define MANUAL_Y_HOME_POS (Y_MAX_POS-( sqrt(sq(POLARGRAPH_MAX_BELT_LEN)-sq(X_BED_SIZE/2)))) //Tab -169
+#define MANUAL_Y_HOME_POS (Y_MAX_POS-( sqrt(sq(POLARGRAPH_MAX_BELT_LEN)-sq(X_BED_SIZE/2))))  //Tab -169
 //#define MANUAL_Z_HOME_POS 0
 //#define MANUAL_I_HOME_POS 0
 //#define MANUAL_J_HOME_POS 0

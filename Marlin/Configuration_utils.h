@@ -1,7 +1,7 @@
 // Choose the name from boards.h that matches your setup
 
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_BTT_SKR_E3_DIP //TAB
+  #define MOTHERBOARD BOARD_BTT_SKR_E3_DIP //Tab
 #endif
 
 /**
@@ -68,7 +68,7 @@
 // Enable for Polargraph Kinematics
 #define POLARGRAPH
 #if ENABLED(POLARGRAPH)
-  #define POLARGRAPH_MAX_BELT_LEN 490.0 //Tab
+  #define POLARGRAPH_MAX_BELT_LEN 810.0 //Tab
   #define POLAR_SEGMENTS_PER_SECOND 5
   #if MOTHERBOARD == BOARD_RUMBA
   #define X_MAX_PIN 37
@@ -138,8 +138,8 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 330 //Tab
-#define Y_BED_SIZE 500 //Tab
+#define X_BED_SIZE 724 //Tab
+#define Y_BED_SIZE 760 //Tab
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS (-X_BED_SIZE/2)
@@ -161,8 +161,12 @@
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
 #define MANUAL_X_HOME_POS 0
-#define MANUAL_Y_HOME_POS (Y_MAX_POS-( sqrt(sq(POLARGRAPH_MAX_BELT_LEN)-sq(X_BED_SIZE/2))))  //Tab -169
+#define MANUAL_Y_HOME_POS (Y_MAX_POS-( sqrt(sq(POLARGRAPH_MAX_BELT_LEN)-sq(X_BED_SIZE/2)))) - 230 //Tab -169
 
 // Homing speeds (linear=mm/min, rotational=°/min)
 #define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (50*60) }
 
+//
+// MKS MINI12864 V3 is an alias for FYSETC_MINI_12864_2_1. Type A/B. NeoPixel RGB Backlight.
+//
+// #define MKS_MINI_12864_V3

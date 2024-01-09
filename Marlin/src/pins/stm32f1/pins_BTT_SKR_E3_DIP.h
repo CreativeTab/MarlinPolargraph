@@ -194,29 +194,58 @@
     #define LCD_PINS_D7                     PA15
     #define ADC_KEYPAD_PIN                  PA1   // Repurpose servo pin for ADC - CONNECTING TO 5V WILL DAMAGE THE BOARD!
 
+//Tab
+
+  //#elif EITHER(MKS_MINI_12864, ENDER2_STOCKDISPLAY)
+  //
+  //  /** Creality Ender-2 display pinout
+  //   *                   ------
+  //   *   (SCK)     PA15 | 1  2 | PB6 (BTN_ENC)
+  //   *   (BTN_EN1) PA9  | 3  4 | RESET
+  //   *   (BTN_EN2) PA10   5  6 | PB9 (LCD_A0)
+  //   *   (LCD_RS)  PB8  | 7  8 | PB7 (MOSI)
+  //   *              GND | 9 10 | 5V
+  //   *                   ------
+  //   *                    EXP1
+  //   */
+  //
+  //  #define BTN_ENC                         PB6
+  //  #define BTN_EN1                         PA9
+  //  #define BTN_EN2                         PA10
+  //
+  //  #define DOGLCD_CS                       PB8
+  //  #define DOGLCD_A0                       PB9
+  //  #define DOGLCD_SCK                      PA15
+  //  #define DOGLCD_MOSI                     PB7
+  //  #define FORCE_SOFT_SPI
+  //  #define LCD_BACKLIGHT_PIN               -1
+  
+
+  //Tab
+  
   #elif EITHER(MKS_MINI_12864, ENDER2_STOCKDISPLAY)
 
-    /** Creality Ender-2 display pinout
-     *                   ------
-     *   (SCK)     PA15 | 1  2 | PB6 (BTN_ENC)
-     *   (BTN_EN1) PA9  | 3  4 | RESET
-     *   (BTN_EN2) PA10   5  6 | PB9 (LCD_A0)
-     *   (LCD_RS)  PB8  | 7  8 | PB7 (MOSI)
-     *              GND | 9 10 | 5V
-     *                   ------
-     *                    EXP1
-     */
+      /** Creality Ender-2 display pinout
+       *                   ------
+       *   (SCK)     PA15 | 1  2 | PB6 (BTN_ENC)
+       *   (BTN_EN1) PA9  | 3  4 | RESET
+       *   (BTN_EN2) PA10   5  6 | PB9 (LCD_A0)
+       *   (LCD_RS)  PB8  | 7  8 | PB7 (MOSI)
+       *              GND | 9 10 | 5V
+       *                   ------
+       *                    EXP1
+       */
 
-    #define BTN_ENC                         PB6
-    #define BTN_EN1                         PA9
-    #define BTN_EN2                         PA10
+      #define BTN_ENC                         PB6
+      #define BTN_EN1                         PA9
+      #define BTN_EN2                         PA10
 
-    #define DOGLCD_CS                       PB8
-    #define DOGLCD_A0                       PB9
-    #define DOGLCD_SCK                      PA15
-    #define DOGLCD_MOSI                     PB7
-    #define FORCE_SOFT_SPI
-    #define LCD_BACKLIGHT_PIN               -1
+      #define DOGLCD_CS                       PB8
+      #define DOGLCD_A0                       PB9
+      #define DOGLCD_SCK                      PA15
+      #define DOGLCD_MOSI                     PB7
+      #define FORCE_SOFT_SPI
+      #define LCD_BACKLIGHT_PIN               -1
 
   #else
     #error "Only CR10_STOCKDISPLAY, ZONESTAR_LCD, ENDER2_STOCKDISPLAY, MKS_MINI_12864, and MKS_LCD12864A/B are currently supported on the BIGTREE_SKR_E3_DIP."

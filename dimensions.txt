@@ -1,0 +1,19 @@
+15.02.2024 : v1
+    moteurs : 545
+    paper settings makelangelo : A2 (420*594)
+    belt_length : 810
+    X_bed_size : 724
+    Y_bed_size : 760
+    manual_Y_home_pos : (Y_MAX_POS-( sqrt(sq(POLARGRAPH_MAX_BELT_LEN)-sq(X_BED_SIZE/2)))) - 230
+    real dimensions : 
+        0% marge :
+            haut : 317
+            bas : 317
+            gauche : 436
+            droite : 437
+        10% marge :
+            haut : 285
+            bas : 285
+            gauche : 394
+            droite : 394
+

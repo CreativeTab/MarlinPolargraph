@@ -68,7 +68,7 @@
 // Enable for Polargraph Kinematics
 #define POLARGRAPH
 #if ENABLED(POLARGRAPH)
-  #define POLARGRAPH_MAX_BELT_LEN 810.0 //Tab
+  #define POLARGRAPH_MAX_BELT_LEN 618.0 //Tab
   #define POLAR_SEGMENTS_PER_SECOND 5
   #if MOTHERBOARD == BOARD_RUMBA
   #define X_MAX_PIN 37
@@ -138,14 +138,14 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 724 //Tab
-#define Y_BED_SIZE 760 //Tab
+#define X_BED_SIZE 501 //Tab
+#define Y_BED_SIZE 564 //Tab
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS (-X_BED_SIZE/2)
+#define X_MIN_POS ((-X_BED_SIZE/2)-1)
 #define Y_MIN_POS (-Y_BED_SIZE/2)
 #define Z_MIN_POS 0
-#define X_MAX_POS (X_BED_SIZE/2)
+#define X_MAX_POS ((X_BED_SIZE/2)+1)
 #define Y_MAX_POS (Y_BED_SIZE/2)
 #define Z_MAX_POS 0
 
@@ -161,7 +161,7 @@
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
 #define MANUAL_X_HOME_POS 0
-#define MANUAL_Y_HOME_POS (Y_MAX_POS-( sqrt(sq(POLARGRAPH_MAX_BELT_LEN)-sq(X_BED_SIZE/2)))) - 230 //Tab -169
+#define MANUAL_Y_HOME_POS (Y_MAX_POS-( sqrt(sq(POLARGRAPH_MAX_BELT_LEN)-sq(X_BED_SIZE/2)))) - 100 //Tab - 230.0
 
 // Homing speeds (linear=mm/min, rotational=°/min)
 #define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (50*60) }
